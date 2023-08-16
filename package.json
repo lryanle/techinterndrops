@@ -1,0 +1,45 @@
+{
+	"name": "techinterndrops",
+	"description": "",
+	"author": "",
+	"version": "1.0.0",
+	"main": "db.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lryanle/techinterndrops.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/lryanle/techinterndrops/issues"
+	},
+	"homepage": "https://github.com/lryanle/techinterndrops#readme",
+	"scripts": {
+		"bot": "ts-node src/discord/Bot.ts",
+		"bot:dev": "pm2 start src/discord/run-ts.sh --watch",
+		"bot:quitall": "pm2 kill",
+		"extractdata": "ts-node src/extractdata/githubextract.ts"
+	},
+	"dependencies": {
+		"@neoncitylights/whatwg-infra": "^0.0.0",
+		"@octokit/core": "^5.0.0",
+		"@octokit/openapi-types": "^18.0.0",
+		"@octokit/plugin-rest-endpoint-methods": "^9.0.0",
+		"@octokit/types": "^11.1.0",
+		"@supabase/supabase-js": "^2.32.0",
+		"discord.js": "^14.12.1",
+		"dotenv": "^16.3.1",
+		"marked": "^7.0.3",
+		"node-fetch": "^3.3.2",
+		"octokit": "^3.1.0",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.1.6",
+		"vite": "^4.4.9"
+	},
+	"devDependencies": {
+		"@vitest/coverage-v8": "^0.34.1",
+		"@vitest/ui": "^0.34.1",
+		"pm2": "^5.3.0",
+		"supabase": "^1.86.0",
+		"vitest": "^0.34.1"
+	}
+}
