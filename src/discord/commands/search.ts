@@ -63,23 +63,26 @@ export const cmdSearch: Command = {
 
     const data: Internship[] = await internships(filters);
 
-    const fields: APIEmbedField[] = [];
-    const embed = new EmbedBuilder()
-      .setTitle(`${filters.role} Opportunities`)
-      .setColor("#3498db"); // You can use any color you like
+    // const fields: APIEmbedField[] = [];
+     // You can use any color you like
 
+    let replies: Promise<any>[] = [];
     data.forEach((internship: Internship) => {
-      fields.push({
+      const embed = new EmbedBuilder()
+      .setColor("#04ff00");
+      const field: APIEmbedField = {
         name: `${internship.company}`,
         value: `[${internship.role}](${internship.app_link})`,
         inline: true,
-      });
-    });
+      };
 
-    embed.addFields(fields);
-
-    await interaction.reply({
+      embed.addFields(field);
+      replies.push( interaction.reply({
       embeds: [embed],
+      }));
     });
+
+    await Promise.all(replies);
+
   },
 };

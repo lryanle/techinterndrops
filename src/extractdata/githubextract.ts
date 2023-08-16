@@ -1,8 +1,10 @@
 import { marked } from "marked";
 import { Octokit } from "octokit";
+import * as dotenv from "dotenv";
+let output = dotenv.config({ path: __dirname + "/../.env" });
 
 const octokit = new Octokit({
-  auth: "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",
+  auth: process.env.GITHUB_PAT,
 });
 
 const fetchData = async () => {
@@ -10,7 +12,7 @@ const fetchData = async () => {
     .request("GET /repos/{owner}/{repo}/contents/{path}", {
       owner: "SimplifyJobs",
       repo: "Summer2024-Internships",
-      path: "README.md",
+      path: ".github/scripts/listings.json",
       headers: {
         "content-type": "application/json",
         "X-GitHub-Api-Version": "2022-11-28",
