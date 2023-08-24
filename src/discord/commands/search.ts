@@ -10,19 +10,17 @@ import { Command } from "./types";
 import { internships } from "../../api/internships";
 import { Internship, QueryFilter } from "./../../interfaces";
 
-const optionCategory = "channel";
+const optionCategory = "position";
 export const categories = [
-  "Software Engineer",
-  "Machine Learning/AI",
-  "Data Science",
-  "Quantitative",
-  "Cybersecurity",
-  "Performance",
-  "Infrastructure",
-  "Site Reliability",
-  "Electrical",
+  "All",
+  "SWE",
+  "PM",
+  "ML/AI",
+  "DS",
+  "Quant",
+  "SRE",
+  "EE",
   "Hardware",
-  "IT",
 ];
 
 const getAppCommandChoices = (

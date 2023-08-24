@@ -16,7 +16,7 @@
 	"scripts": {
 		"bot": "ts-node src/discord/Bot.ts",
 		"bot:dev": "pm2 start src/discord/run-ts.sh --watch",
-		"bot:quitall": "pm2 kill",
+		"bot:quit": "pm2 kill",
 		"extractdata": "ts-node src/extractdata/githubextract.ts"
 	},
 	"dependencies": {

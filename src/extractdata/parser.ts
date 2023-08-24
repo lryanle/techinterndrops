@@ -1,62 +1,15 @@
 // keyword to primary key
 // primary key maps to category
 
-import { extractedTable } from "./githubextract";
-
 const rolesMap = new Map([
-  [
-    "software",
-    [
-      "Software",
-      "Engineer",
-      "Frontend",
-      "Backend",
-      "Mobile",
-      "cyber",
-      "CSEC",
-      "Cybersecurity",
-      "Security",
-      "SecOps",
-      "IT",
-      "Information",
-      "Technology",
-      "Performance",
-      "tech",
-      "mobile",
-      "IOS",
-      "Android",
-      "firmware",
-      "cloud",
-      "techops",
-      "tech ops",
-    ],
-  ],
-  [
-    "ml",
-    ["ML", "Machine", "Learning", "AI", "vision", "NLP", "cv", "artificial"],
-  ],
-  ["ds", ["DS", "Data", "Analytics"]],
-  [
-    "quant",
-    [
-      "Fin",
-      "Finance",
-      "Quantitative",
-      "Investment",
-      "Investments",
-      "Trading",
-      "Debt",
-      "Equity",
-      "fintech",
-    ],
-  ],
-  ["sre", ["Infra", "Infrastructure", "reliability"]],
-  ["electrical", ["Electrical"]],
-  [
-    "hardware",
-    ["Hardware", "Firmware", "GPU", "Microarchitecture", "architecture"],
-  ],
-  ["pm", ["project", "product", "manager", "management"]],
+  ["swe", ["software", "engineer", "frontend", "backend", "mobile", "cyber", "csec", "cybersecurity", "security", "secops", "it", "information", "technology", "performance", "tech", "mobile", "ios", "android", "firmware", "cloud", "techops", "ops"]],
+  ["pm", ["project", "product", "program", "manager", "management"]],
+  ["ml", ["ml", "machine", "learning", "ai", "vision", "nlp", "cv", "artificial"]],
+  ["ds", ["ds", "data", "analytics"]],
+  ["quant", ["fin", "finance", "quant", "quantitative", "investment", "investments", "trading", "debt", "equity", "fintech", "hft"]],
+  ["sre", ["infra", "infrastructure", "reliability"]],
+  ["ee", ["electrical"]],
+  ["hardware", ["hardware", "firmware", "gpu", "microarchitecture", "architecture"]],
 ]);
 
 // Creates a fast search index by inverting a Map<string, string[]>.
